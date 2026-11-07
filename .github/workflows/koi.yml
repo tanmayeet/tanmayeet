@@ -15,12 +15,14 @@ concurrency: koi
 jobs:
   koi:
     runs-on: ubuntu-latest
-    steps:
+      steps:
       - uses: actions/checkout@v7
       - uses: yalongwastaken/git-koi@v1
         with:
           body: asagi
           output-dir: koi
+      - name: Clear the download folder
+        run: rm -rf "$RUNNER_TEMP/git-koi"
       - uses: yalongwastaken/git-koi@v1
         with:
           body: gold
