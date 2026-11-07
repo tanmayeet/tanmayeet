@@ -15,7 +15,7 @@ concurrency: koi
 jobs:
   koi:
     runs-on: ubuntu-latest
-      steps:
+    steps:
       - uses: actions/checkout@v7
       - uses: yalongwastaken/git-koi@v1
         with:
